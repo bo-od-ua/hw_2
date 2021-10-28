@@ -1,23 +1,5 @@
-<modification>
-	<name>ep_seo</name>
-	<code>ep_seo</code>
-	<version>0.1.1</version>
-	<link>http://bo.od.ua</link>
-	<author>Europaw</author>
-
-	<file path="catalog/controller/product/category.php">
-		<operation error="skip">
-			<search ><![CDATA[$this->load->model('tool/image');]]></search>
-			<add position="after"><![CDATA[
-							if (isset($this->request->get['page'])) {
-            		$page = $this->request->get['page'];
-            		$pathx = explode('_', $this->request->get['path']);
-            		$pathx = end($pathx);
-            		$this->document->addLink($this->url->link('product/category', 'path=' . $pathx ), 'canonical');
-        			} else {
-            		$page = 1;
-        			}		
-			]]></add>
-		</operation>
-	</file>
-</modification>
+1       test    Moscow  1234123
+2       test2   Saint-P 1232121
+3       test3   Tver    4352124
+4       test4   Milan   7990923
+5       test5   Moscow  908213
